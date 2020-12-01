@@ -14,16 +14,14 @@ void modify(string file_path)
     //getting key input from user
     string key;
     string val;
-    cout << " Enter the key to be modificed ";
+    cout << " Enter the key to be modified: ";
     cin >> key;
-    cout << endl;
     cout << " Enter the value for the key: ";
     cin >> val;
     cout << endl;
     // getting the line index
     int line_index = get_lineindex(file_path, key);
 
-    cerr << line_index << " line index " << endl;
     if (line_index == -1)
         cout << " key does not exist \n";
     else
@@ -31,7 +29,7 @@ void modify(string file_path)
 
         //getting the line from the index of the key
         GotoLine(file, line_index);
-        cerr << " Done" << endl;
+        
 
         string line;
         // file >> line;
@@ -67,7 +65,7 @@ void modify(string file_path)
         char *char_arr;
         char_arr = &new_info[0];
 
-        cout << char_arr << endl;
+        cout << " " << char_arr << endl;
         ofstream file_2;
         file_2.open(file_path, ios_base::app);
         file_2.write(char_arr, strlen(char_arr));

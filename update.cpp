@@ -38,7 +38,9 @@ void update(string file_path)
             current_time = time(NULL);
             string ts = to_string(current_time);
 
-            if (ttl < ts)
+            // cout << "Time: " << ttl << ' ' << ts << endl;
+         
+            if (ttl > ts)
             {
                 char *char_arr;
                 char_arr = &tp[0];
@@ -52,5 +54,8 @@ void update(string file_path)
 
         remove(file_arr);
         rename("temp.txt", file_arr);
+    }
+    else {
+        cout << "Error\n";
     }
 }

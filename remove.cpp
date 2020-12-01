@@ -15,6 +15,7 @@ void remove(string file_path)
     if (line_index == -1)
     {
         cout << " Key does not exist\n";
+        return;
     }
     delete_line(file_path, line_index);
     cout << " Successful deletion\n";

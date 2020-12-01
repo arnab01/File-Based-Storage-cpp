@@ -12,7 +12,7 @@ void read(string file_path)
     //getting key input from user
 
     string key;
-    cout << " Enter the key to be searched: " << endl;
+    cout << " Enter the key to be searched: ";
     cin >> key;
     //reading through the file
     if (file.is_open())
@@ -23,7 +23,7 @@ void read(string file_path)
             string c = check(tp, key);
             if (c != "")
             {
-                cout << key << " " << c << " " << endl;
+                cout << " " << key << " " << c << " " << endl;
                 return;
             }
         }

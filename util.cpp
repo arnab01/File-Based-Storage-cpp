@@ -66,7 +66,6 @@ void delete_line(string file_name, int n)
     char *file_arr;
     file_arr = &file_name[0];
 
-    cout << "path : " << file_arr << endl;
     char c;
     int line_no = 1;
     while (is.get(c))
@@ -81,11 +80,7 @@ void delete_line(string file_name, int n)
     ofs.close();
     is.close();
 
-    if (remove(file_arr) == 0)
-        cout << "success" << endl;
-    else
-        cout << "not done" << endl;
-
+    remove(file_arr);
     rename("temp.txt", file_arr);
 }
 

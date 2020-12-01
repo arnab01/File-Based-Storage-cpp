@@ -56,7 +56,7 @@ void insert(string file_path)
         //getting key-value content from the user
         string s;
 
-        cout << " Enter content : ";
+        cout << " Enter content in order (key value time-to-live): ";
         cin.ignore();
         getline(cin, s);
 

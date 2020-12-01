@@ -4,6 +4,7 @@
 */
 #include <iostream>
 #include <string>
+#include <ctime>
 using namespace std;
 
 void insert(string);
@@ -35,7 +36,8 @@ int main()
         cin >> choice;
 
         // invoking operation based on choices
-        update(file_path);
+        update(final_path);
+        
         switch (choice)
         {
         case 0:
