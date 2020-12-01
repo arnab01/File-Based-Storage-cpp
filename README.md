@@ -1,6 +1,6 @@
 
 A file-based key-value data store that supports the basic CRD (create, read, and delete) operations. This data store is meant to be used as a local storage for one single 
-process on one laptop. 
+process on one laptop. (Refer the 'Unit Tests and Constraints.pdf' for the output snapshots)
 
 The data store supports the following functional requirements:
  1. It can be initialized using an optional file path. If one is not provided, it will reliably create itself in a reasonable location on the laptop.
