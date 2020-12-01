@@ -14,7 +14,7 @@ void remove(string file_path)
     int line_index = get_lineindex(file_path, key);
     if (line_index == -1)
     {
-        cout << "Key does not exist\n";
+        cout << " Key does not exist\n";
     }
     delete_line(file_path, line_index);
     cout << " Successful deletion\n";

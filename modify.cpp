@@ -25,13 +25,13 @@ void modify(string file_path)
 
     cerr << line_index << " line index " << endl;
     if (line_index == -1)
-        cout << "key does not exist \n";
+        cout << " key does not exist \n";
     else
     {
 
         //getting the line from the index of the key
         GotoLine(file, line_index);
-        cerr << "Done" << endl;
+        cerr << " Done" << endl;
 
         string line;
         // file >> line;
@@ -47,7 +47,7 @@ void modify(string file_path)
             tokens.push_back(intermediate);
         }
 
-        cout << "Tockens:\n";
+        // cout << "Tockens:\n";
         // for(auto& x : tokens) cout << x << ' ';
         // cout << '\n';
 

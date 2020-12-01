@@ -12,7 +12,7 @@ void read(string file_path)
     //getting key input from user
 
     string key;
-    cout << "Enter the key to be searched: " << endl;
+    cout << " Enter the key to be searched: " << endl;
     cin >> key;
     //reading through the file
     if (file.is_open())
@@ -28,7 +28,7 @@ void read(string file_path)
             }
         }
 
-        cout << "key not available" << endl;
+        cout << " key not available" << endl;
         file.close(); //close the file object.
     }
 }

@@ -16,14 +16,14 @@ string create(string file_path, string file_name)
 
 	//registering the file path
 	string final_path = "";
-	final_path += file_path == "" ? "D:\\Arnab\\Freshworks" : file_path;
+	final_path += file_path == "" ? "D:\\Btech\\File-Based-Key-Value-Map-cpp" : file_path;
 	final_path += "\\";
 	final_path += file_name == "" ? "file.txt" : file_name;
 
 	//creating the file
 	const char *tmp = &final_path[0];
 	file.open(tmp);
-	cout << "File is created." << endl;
+	cout << "\n File is created." << endl;
 	file.close();
 	return final_path;
 }

@@ -1,6 +1,6 @@
 
 /** Run the project with:
-    g++ create.cpp insert.cpp main.cpp modify.cpp read.cpp util.cpp remove.cpp -o main -std=c++17
+    g++ create.cpp insert.cpp main.cpp modify.cpp read.cpp util.cpp remove.cpp update.cpp -o main -std=c++17
 */
 #include <iostream>
 #include <string>
@@ -10,6 +10,7 @@ void insert(string);
 void read(string);
 void modify(string);
 void remove(string);
+void update(string);
 string create(string, string);
 
 int main()
@@ -34,6 +35,7 @@ int main()
         cin >> choice;
 
         // invoking operation based on choices
+        update(file_path);
         switch (choice)
         {
         case 0:

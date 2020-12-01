@@ -115,8 +115,12 @@ int get_lineindex(string &file_path, string &key)
     return line_index;
 }
 
-bool input_check(const string &s, string *err_message)
+bool input_check(const string &file_path, const string &s, string *err_message)
 {
+    ifstream in_file(file_path, ios::binary);
+    in_file.seekg(0, ios::end);
+    int file_size = in_file.tellg();
+    int input_size = s.size();
     vector<string> tokens;
     stringstream check1(s);
     string intermediate;
@@ -125,12 +129,19 @@ bool input_check(const string &s, string *err_message)
         tokens.push_back(intermediate);
     }
 
+    if (file_size + input_size > 1024 * 1024 * 1024)
+    {
+        *err_message = " File size limit exceeded";
+        return false;
+    }
+    //checking key size
     if (tokens[0].size() > 32)
     {
         *err_message = " key size exceeded limits";
         return false;
     }
 
+    //checking value size
     if (tokens[1].size() > 1024 * 16)
     {
         *err_message = " key size exceeded limits";
